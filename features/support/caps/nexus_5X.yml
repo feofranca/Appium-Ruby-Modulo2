@@ -1,0 +1,5 @@
+caps: 
+ deviceName: Nexus_5X
+ platformName: Android
+ autoGrantPermissions: true
+ app: File.dirname(__FILE__), /../app/FasTip.apk

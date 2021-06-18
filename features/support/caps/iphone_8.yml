@@ -1,0 +1,8 @@
+caps: 
+ deviceName: iPhone 8
+ platformName: iOS
+ platformVersion: '13.3'
+ app: File.dirname(__FILE__), /../app/FasTipH.app
+ autoAcceptAlerts: true
+ autoGrantPermissions: true
+ automationName: XCUITest

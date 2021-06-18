@@ -1,0 +1,6 @@
+default: --profile report --profile iphone_8 --publish-quiet
+report: --format pretty --format html --out=reports/report.html
+
+#Devices
+nexus_5X: DEVICE='nexus_5X'
+iphone_8: DEVICE='iphone_8'
