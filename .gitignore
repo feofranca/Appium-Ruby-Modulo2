@@ -1,4 +1,7 @@
-reports/allure-results
-reports/logs
+reports/allure-results/*
+reports/logs/*
+
+!reports/allure-results/.gitkeep
+!reports/logs/.gitkeep
 
 *.lock
