@@ -9,12 +9,12 @@ module IOS
       super(txt_value, btn_calculate)
     end
 
-    def validar_gorjeta
-      find("$#{@comissao}").visible
+    def validate_tip
+      find("$#{@tip}").visible
     end
 
-    def validar_conta
-      find("$#{@comissao + @valor}").visible
+    def validate_total
+      find("$#{@tip + @total}").visible
     end
   end
 end

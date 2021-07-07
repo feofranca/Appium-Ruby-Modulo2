@@ -3,31 +3,29 @@ class BaseHomePage
     @btn_settings = 'Settings'
     @txt_value = txt_value
     @btn_calculate = btn_calculate
-    @valor = nil
-    @taxa = 15
+    @total = nil
+    @tax = 15
   end
 
-  def estar_na_home
+  def home_app
     find(@btn_settings)
   end
 
-  def acessar_settings
+  def access_settings
     find(@btn_settings).click
   end
 
-  def atualizar_taxa(taxa)
-    @taxa = taxa
+  def update_tax(tax)
+    @tax = tax
   end
 
-  def calcular_comissao(valor)
-    @valor = valor
+  def calculate_tip(total)
+    @total = total
     txt_value = xpath(@txt_value)
     txt_value.click
-    txt_value.send_keys(valor)
+    txt_value.send_keys(total)
     find(@btn_calculate).click
-  end
 
-  def validar_comissao
-    @comissao = @valor.to_f * @taxa.to_f / 100
+    @tip = @total.to_f * @tax.to_f / 100
   end
 end

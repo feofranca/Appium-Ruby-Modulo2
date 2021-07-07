@@ -1,0 +1,4 @@
+reports/allure-results
+reports/logs
+
+*.lock

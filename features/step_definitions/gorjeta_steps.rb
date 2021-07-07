@@ -1,21 +1,20 @@
 Dado('estar na home do app') do
-  home.estar_na_home
+  home.home_app
 end
 
 Dado('alterar o valor da comissao {int}') do |taxa|
-  home.acessar_settings
-  settings.alterar_taxa(taxa)
-  home.atualizar_taxa(taxa)
+  home.access_settings
+  settings.change_tax(taxa)
+  home.update_tax(taxa)
 end
 
 Quando('a conta for {int}') do |valor|
-  home.calcular_comissao(valor)
+  home.calculate_tip(valor)
 end
 
 Então('deve ser exibido o valor da gorjeta e total da conta') do
-  home.validar_comissao
   aggregate_failures do
-    expect(home.validar_gorjeta).to be_truthy
-    expect(home.validar_conta).to be_truthy
+    expect(home.validate_tip).to be_truthy
+    expect(home.validate_total).to be_truthy
   end
 end

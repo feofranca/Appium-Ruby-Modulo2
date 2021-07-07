@@ -11,6 +11,7 @@ Funcionalidade: Calculo de gorjeta
   * estar na home do app
 
   @comissao_padrao
+  @URGENCY:critical @story:comissao-padrao @feature:calculo-gorjeta @epic:app-calculo-gorjeta
   Esquema do Cenário: Calcular comissão padrão
     Quando a conta for <valor>
     Então deve ser exibido o valor da gorjeta e total da conta
@@ -21,8 +22,9 @@ Funcionalidade: Calculo de gorjeta
       |  1    |
       | 3500  |
 
-@comissao_alterada
-  Esquema do Cenário: Calcular comissão padrão
+  @comissao_alterada
+  @URGENCY:normal @story:comissao-alterada @feature:calculo-gorjeta @epic:app-calculo-gorjeta
+  Esquema do Cenário: Calculo de comissão alterada
     Dado alterar o valor da comissao <taxa>
     Quando a conta for <valor>
     Então deve ser exibido o valor da gorjeta e total da conta

@@ -1,6 +1,9 @@
-default: --profile report --profile iphone_8 --publish-quiet
-report: --format pretty --format html --out=reports/report.html
+default: -p iphone_8 -p allure_report
 
 #Devices
 nexus_5X: DEVICE='nexus_5X'
 iphone_8: DEVICE='iphone_8'
+
+#Report
+allure_report: "--format pretty --publish-quiet --color --format AllureCucumber::CucumberFormatter --out reports/logs"
+html_report: --format pretty --publish-quiet --format html --out=reports/features_report.html

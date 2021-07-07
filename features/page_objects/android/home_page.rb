@@ -11,13 +11,13 @@ module Android
       super(txt_value, btn_calculate)
     end
 
-    def validar_gorjeta
+    def validate_tip
       Appium::Core::Wait.until { !find(@txt_tip).text.eql?('$0.00') }
-      find(@txt_tip).text.eql?("$#{'%.2f' % @comissao}")
+      find(@txt_tip).text.eql?("$#%{'%.2f' @tip}")
     end
 
-    def validar_conta
-      find(@txt_total).text.eql?("$#{'%.2f' % (@comissao.to_f + @valor)}")
+    def validate_total
+      find(@txt_total).text.eql?("$#%{'%.2f' (@tip.to_f + @total)}")
     end
   end
 end

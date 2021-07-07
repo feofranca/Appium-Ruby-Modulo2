@@ -3,10 +3,10 @@ require './features/page_objects/settings_page'
 module IOS
   class SettingsPage < BaseSettingsPage
     def initialize
-      txtValue = '//XCUIElementTypeOther[@name="main"]/XCUIElementTypeTextField'
+      txt_value = '//XCUIElementTypeOther[@name="main"]/XCUIElementTypeTextField'
       btn_save = 'Save'
 
-      super(txtValue, btn_save)
+      super(txt_value, btn_save)
     end
   end
 end
